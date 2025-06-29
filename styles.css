@@ -457,7 +457,7 @@ footer{
     gap: 3px;
     margin-top: 10px;
     overflow: visible;
-      font-size:medium;
+    font-size:small;
   }
 
   nav ul li {
