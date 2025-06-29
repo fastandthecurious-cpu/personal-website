@@ -416,8 +416,9 @@ footer{
   /* General spacing */
   body, .intro, .mission, .vision, .work, .goals, .hrms, .petshop, .storefront {
     margin: 20px;
-    padding: 5px;
+    padding: 20px;
     height: auto;
+    text-align:justify;
   }
 
   /* Grid layouts become single column */
