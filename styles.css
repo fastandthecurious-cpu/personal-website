@@ -451,9 +451,10 @@ footer{
   }
 
   nav ul {
-    gap: 5px;
+    gap: 3px;
     margin-top: 10px;
     overflow: visible;
+      font-size:medium;
   }
 
   nav ul li {
