@@ -421,7 +421,7 @@ footer{
   .intro{
       margin: 20px;
       padding: 20px;
-      height: 200px; 
+      height: 210px; 
 
   /* Grid layouts become single column */
   .mission,
@@ -453,7 +453,7 @@ footer{
   }
 
   nav ul {
-    gap: 5px;
+    gap: 3px;
     margin-top: 10px;
   }
 
