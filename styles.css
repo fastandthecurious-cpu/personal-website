@@ -414,10 +414,14 @@ footer{
 @media (max-width: 768px) {
 
   /* General spacing */
-  body, .intro, .mission, .vision, .work, .goals, .hrms, .petshop, .storefront {
+  body, .mission, .vision, .work, .goals, .hrms, .petshop, .storefront {
     margin: 20px;
     padding: 20px;
   }
+  .intro{
+      margin: 20px;
+      padding: 20px;
+      height: 200px; 
 
   /* Grid layouts become single column */
   .mission,
@@ -449,7 +453,7 @@ footer{
   }
 
   nav ul {
-    gap: 10px;
+    gap: 5px;
     margin-top: 10px;
   }
 
