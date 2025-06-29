@@ -415,7 +415,7 @@ footer{
 
   /* General spacing */
   body, .intro, .mission, .vision, .work, .goals, .hrms, .petshop, .storefront {
-    margin: 5px;
+    margin: 20px;
     padding: 5px;
     height: auto;
   }
@@ -430,6 +430,7 @@ footer{
   .storefront {
     grid-template-columns: 1fr;
     text-align: center;
+      margin: 20px;
   }
 
   /* Images full width */
