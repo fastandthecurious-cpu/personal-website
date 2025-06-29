@@ -415,10 +415,11 @@ footer{
 
   /* General spacing */
   body{
-      margin: 0;
-      padding: 0;
+      margin: 0 !important;
+      padding: 0 !important;
       justify-content: center;
       align-items: center;
+      display: full-width;
   }
     .intro, .mission, .vision, .work, .goals, .hrms, .petshop, .storefront {
     margin: 20px;
