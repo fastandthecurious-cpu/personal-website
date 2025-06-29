@@ -465,7 +465,7 @@ footer{
   .hero, .about, .portfolio, .contact {
     padding: 20px;
     height: auto;
-    position: relative;
+    position: cover;
   }
 
   /* Adjust text sizing */
