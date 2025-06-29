@@ -11,7 +11,7 @@ header{
     position: sticky !important;
     top: 0;
     background-color: gray;
-    padding: 20px 15px;
+    padding: 20px 10px;
     color: white;
     display: flex;
     justify-content: space-between;
