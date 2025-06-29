@@ -448,6 +448,7 @@ footer{
   header {
     flex-wrap: wrap;
     overflow: visible;
+      padding-left:3px;
   }
 
   nav ul {
