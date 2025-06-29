@@ -417,6 +417,7 @@ footer{
   body, .intro, .mission, .vision, .work, .goals, .hrms, .petshop, .storefront {
     margin: 20px;
     padding: 20px;
+    height: auto;
   }
 
   /* Grid layouts become single column */
@@ -446,11 +447,13 @@ footer{
   /* Header spacing and text */
   header {
     flex-wrap: wrap;
+    overflow: visible;
   }
 
   nav ul {
     gap: 5px;
     margin-top: 10px;
+    overflow: visible;
   }
 
   nav ul li {
