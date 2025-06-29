@@ -414,7 +414,12 @@ footer{
 @media (max-width: 768px) {
 
   /* General spacing */
-  body, .intro, .mission, .vision, .work, .goals, .hrms, .petshop, .storefront {
+  body{
+      margin: 0;
+      padding: 0;
+      
+  }
+    .intro, .mission, .vision, .work, .goals, .hrms, .petshop, .storefront {
     margin: 20px;
     padding: 20px;
     height: auto;
