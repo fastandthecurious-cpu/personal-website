@@ -492,7 +492,14 @@ footer{
 .tios-text h2{
     font-size: 2rem;
     color: #CBA24A;
+}
+.tios-text a{
+    font-size: 1.2rem;
+    color: #CBA24A;
     margin-bottom: 15px;
+}
+.tios-text a:hover{
+    color: white;
 }
 .tios-image img{
     width: 100%;
