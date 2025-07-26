@@ -4,6 +4,27 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width initial-scale=1.0">
         <title>portfolio</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const options = {
+                threshold: 0.1
+                };
+
+                const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                    entry.target.classList.add('animate');
+                    observer.unobserve(entry.target);
+                    }
+                });
+                }, options);
+
+                const sections = document.querySelectorAll('.tios, .hrms, .petshop, .storefront');
+                sections.forEach(section => {
+                observer.observe(section);
+                });
+            });
+    </script>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
@@ -28,6 +49,15 @@
                 <p>"Each project in this portfolio has helped me strengthen a different part of my skill set — from frontend styling to backend logic, responsive layouts to dynamic features. I believe in learning by doing, and every demo you see here is a result of exploring new concepts, solving real challenges, and staying curious about how things work on the web. I have already worked in many real-world projects, but I'm not interested to disclose the details of the sites since they are not live yet, So I won't include them here."</p>
             </section>
 
+            <section class="tios">
+                <div class="tios-text">
+                    <h2>Tios Advertisement Web page</h2>
+                    <p>This is an Advertisement webpage which i have done for the marketing purpose of the company named Tios Solar Private Limited</p>
+                </div>
+                <div class="tios-image">
+                    <img src="assets/tios.png" alt="tios system">
+                </div>
+            </section>
             <section class="hrms">
                 <div class="hrms-text">
                     <h2>HRMS System</h2>

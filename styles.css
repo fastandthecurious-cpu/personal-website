@@ -6,13 +6,14 @@
 body{
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #FBF0DA;
 }
 header{
     position: sticky !important;
     top: 0;
-    background-color: gray;
+    background-color: #0A2540;
     padding: 20px 5px;
-    color: white;
+    color: #9C7443;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,7 +34,7 @@ nav ul li{
 }
 
 nav ul li a{
-    color: white;
+    color: #CBA24A;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
@@ -41,10 +42,10 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color: black;
+    color: #CBA24A;
 }
 nav ul li a:active{
-    color: black;
+    color: white;
 }
 
 .hero {
@@ -55,8 +56,8 @@ nav ul li a:active{
   align-items: center;
   text-align: center;
   padding: 20px;
-  color: white;
-  background: url('assets/home.jpeg') no-repeat center center / cover;
+  color: #9C7443;
+  background: url('assets/home.jpg') no-repeat center center / cover;
   background-attachment: fixed;
   position: relative;
 }
@@ -65,34 +66,72 @@ nav ul li a:active{
     position: relative;
     margin-bottom: 20px;
     max-width: 800px;
-    color: white;
+    color: #9C7443;
 }
 .hero h2{
     position: relative;
     margin-bottom: 15px;
     max-width: 800px;
-    color: white;
+    color: #9C7443;
 }
 .hero p{
     position: relative;
     max-width: 800px;
-    color: white;
+    color: #9C7443;
 }
 .intro{
-    background-color: white;
+    background-color: #FBF0DA;
     display: flex;
     flex-direction: column;
     height: auto;
     padding:100px 100px;
-    margin: 20px 200px;
-    word-spacing: 2px;
 }
 .intro p{
-    color: gray;
+    color: #9C7443;
     font-weight: bold;
     font-size: large;
     padding: 200px auto;
+     animation: fadeSlideDown 2s ease-out forwards;
+    opacity: 0;
 }
+@keyframes fadeSlideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(+200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.skills-scroller {
+  width: 100%;
+  overflow: hidden;
+  background: #0A2540; /* optional background */
+  color: #cba24aa8;
+  padding: 10px 0;
+  font-size: 30px;
+  white-space: nowrap;
+}
+
+.scroll-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 35s linear infinite;
+}
+.scroll-text span {
+  padding-right: 80px; 
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 .mission{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -102,16 +141,16 @@ nav ul li a:active{
     margin: 40px 200px;
     padding-left: 20px;
     padding-right: 5px;
-    background-color: gray;
+    background-color: #CBA24A;
     border-radius: 12px;
 }
 .mission-text{
     font-size: 1.2rem;
-    color: white;
+    color: #0A2540;
 }
 .mission-text h2{
     font-size: 2rem;
-    color: white;
+    color: #0A2540;
     margin-bottom: 15px;
 }
 .mission-image img{
@@ -128,16 +167,17 @@ nav ul li a:active{
     max-width: 1200px;
     margin: 40px 200px;
     padding-right: 10px;
-    background-color:gray;
+    background-color: #CBA24A;
     border-radius: 12px;
 }
+
 .vision-text{
     font-size: 1.2rem;
-    color: white;
+    color: #0A2540;
 }
 .vision-text h2{
     font-size: 2rem;
-    color: white;
+    color: #0A2540;
     margin-bottom: 15px;
 }
 .vision-image img{
@@ -147,11 +187,43 @@ nav ul li a:active{
     margin-left: 5px;
     border-radius: 10px;
 }
+.mission, .vision {
+    opacity: 0;
+    transform: translateX(0); /* default */
+    transition: all 0.5s ease-out;
+}
+.mission.animate {
+    animation: fadeSlideleft 2s ease-out forwards;
+}
+@keyframes fadeSlideleft {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.vision.animate {
+    animation: fadeSlideright 2s ease-out forwards;
+}
+@keyframes fadeSlideright {
+    0% {
+        opacity: 0;
+        transform: translateX(+200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 footer{
     height:70px;
-    background-color: black;
+    background-color: #0A2540;
     display:flex;
-    color:white;
+    color:#CBA24A;
     padding: 20px 200px;
     justify-content: center;
 }
@@ -164,7 +236,7 @@ footer{
   align-items: center;
   text-align: center;
   padding: 20px;
-  color: black;
+  color: #282828;
   background: url('assets/about.jpeg') no-repeat center center / cover;
   background-attachment: fixed;
   position: relative;
@@ -173,19 +245,19 @@ footer{
     position: relative;
     margin-bottom: 20px;
     max-width: 800px;
-    color: black;
+    color: #0A2540;
     font-size: xx-large;
 }
 .about h2{
     position: relative;
     margin-bottom: 15px;
     max-width: 800px;
-    color: black;
+    color: #0A2540;
 }
 .about p{
     position: relative;
     max-width: 800px;
-    color: black;
+    color: #0A2540;
     font-weight: bolder;
     text-align: justify;
 }
@@ -198,23 +270,23 @@ footer{
     margin: 40px 200px;
     padding-left: 20px;
     padding-right: 5px;
-    background-color: gray;
+    background-color: #0A2540;
     border-radius: 12px;
 }
 .work-text{
     font-size: 1.2rem;
-    color: white;
+    color: #CBA24A;
     margin-left:10px;
 }
 .work-text h2{
     font-size: 2rem;
-    color: white;
+    color: #CBA24A;
     margin-bottom: 15px;
 }
 
 .work-text ul{
     font-size: 1.2rem;
-    color:white;
+    color:#CBA24A;
     margin-bottom:15px;
 }
 .work-image img{
@@ -231,21 +303,21 @@ footer{
     max-width: 1200px;
     margin: 40px 200px;
     padding-right: 10px;
-    background-color: gray;
+    background-color: #0A2540;
     border-radius: 12px;
 }
 .goals-text{
     font-size: 1.2rem;
-    color: white;
+    color: #CBA24A;
 }
 .goals-text h2{
     font-size: 2rem;
-    color: white;
+    color: #CBA24A;
     margin-bottom: 15px;
 }
 .goals-text ul{
     font-size: 1.2rem;
-    color: white;
+    color: #CBA24A;
     margin-bottom:15px;
 }
 .goals-image img{
@@ -255,6 +327,38 @@ footer{
     margin-left: 5px;
     border-radius: 10px;
 }
+.work, .goals {
+    opacity: 0;
+    transform: translateX(0); /* default */
+    transition: all 0.5s ease-out;
+}
+.work.animate {
+    animation: fadeSlideleft 2s ease-out forwards;
+}
+@keyframes fadeSlideleft {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.goals.animate {
+    animation: fadeSlideright 2s ease-out forwards;
+}
+@keyframes fadeSlideright {
+    0% {
+        opacity: 0;
+        transform: translateX(+200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 .portfolio {
   height: 70vh;
   display: flex;
@@ -263,7 +367,7 @@ footer{
   align-items: center;
   text-align: center;
   padding: 20px;
-  color: black;
+  color: #0A2540;
   background: url('assets/portfolio.jpeg') no-repeat center center / cover;
   background-attachment: fixed;
   position: relative;
@@ -272,19 +376,19 @@ footer{
     position: relative;
     margin-bottom: 20px;
     max-width: 800px;
-    color: black;
+    color: #0A2540;
     font-size: xx-large;
 }
 .portfolio h2{
     position: relative;
     margin-bottom: 15px;
     max-width: 800px;
-    color: black;
+    color: #0A2540;
 }
 .portfolio p{
     position: relative;
     max-width: 800px;
-    color: black;
+    color: #0A2540;
     font-weight: bolder;
     text-align: justify;
 }
@@ -297,16 +401,16 @@ footer{
     margin: 40px 200px;
     padding-left: 20px;
     padding-right: 5px;
-    background-color: gray;
+    background-color: #0A2540;
     border-radius: 12px;
 }
 .hrms-text{
     font-size: 1.2rem;
-    color: white;
+    color: #CBA24A;
 }
 .hrms-text h2{
     font-size: 2rem;
-    color: white;
+    color: #CBA24A;
     margin-bottom: 15px;
 }
 .hrms-image img{
@@ -324,16 +428,16 @@ footer{
     margin: 40px 200px;
     padding-left: 5px;
     padding-right: 5px;
-    background-color: gray;
+    background-color: #0A2540;
     border-radius: 12px;
 }
 .petshop-text{
     font-size: 1.2rem;
-    color: white;
+    color: #CBA24A;
 }
 .petshop-text h2{
     font-size: 2rem;
-    color: white;
+    color: #CBA24A;
     margin-bottom: 15px;
 }
 .petshop-image img{
@@ -351,16 +455,16 @@ footer{
     margin: 40px 200px;
     padding-left: 20px;
     padding-right: 5px;
-    background-color: gray;
+    background-color: #0A2540;
     border-radius: 12px;
 }
 .storefront-text{
     font-size: 1.2rem;
-    color: white;
+    color: #CBA24A;
 }
 .storefront-text h2{
     font-size: 2rem;
-    color: white;
+    color: #CBA24A;
     margin-bottom: 15px;
 }
 .storefront-image img{
@@ -368,6 +472,91 @@ footer{
     height: auto;
     margin-top: 5px;
     border-radius: 10px;
+}
+.tios{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 40px 200px;
+    padding-left: 20px;
+    padding-right: 5px;
+    background-color: #0A2540;
+    border-radius: 12px;
+}
+.tios-text{
+    font-size: 1.2rem;
+    color: #CBA24A;
+}
+.tios-text h2{
+    font-size: 2rem;
+    color: #CBA24A;
+    margin-bottom: 15px;
+}
+.tios-image img{
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+.hrms, .petshop, .storefront, .tios{
+    opacity: 0;
+    transform: translateX(0); /* default */
+    transition: all 0.5s ease-out;
+}
+.hrms.animate {
+    animation: fadeSlideleft 2s ease-out forwards;
+}
+@keyframes fadeSlideleft {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.petshop.animate {
+    animation: fadeSlideright 2s ease-out forwards;
+}
+@keyframes fadeSlideright {
+    0% {
+        opacity: 0;
+        transform: translateX(+200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.storefront.animate {
+    animation: fadeSlideleft 2s ease-out forwards;
+}
+@keyframes fadeSlideleft {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.tios.animate {
+    animation: fadeSlideright 2s ease-out forwards;
+}
+@keyframes fadeSlideright {
+    0% {
+        opacity: 0;
+        transform: translateX(+200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 .contact {
   height: 70vh;
@@ -377,10 +566,16 @@ footer{
   align-items: center;
   text-align: center;
   padding: 20px;
-  color: black;
+  color: #CBA24A;
   background: url('assets/pexels-ketut-subiyanto-4963437.jpg') no-repeat center center / cover;
   background-attachment: fixed;
   position: relative;
+}
+.contact h1{
+    font-size: 70px;
+}
+.contact p{
+    font-size: 22px;
 }
 .social{
     display: flex;
@@ -388,7 +583,7 @@ footer{
     justify-content: center;
     align-items: center;
     height: 100px;
-    background-color: #fff3e6;
+    background-color: #0A2540;
 }
 .social p{
     
@@ -402,70 +597,59 @@ footer{
 
 .social-links a {
   text-decoration: none;
-  color: #333;
+  color: #CBA24A;
   font-size: 24px;
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .social-links a:hover {
-  color: #0077b5; /* change color on hover */
+  color: #9C7443; 
   transform: scale(1.2);
 }
 
 @media (max-width: 768px) {
 
-  /* General spacing */
-  body{
-      margin: 0 !important;
-      padding: 0 !important;
-      justify-content: center;
-      align-items: center;
-      display: full-width;
-  }
-    .intro, .mission, .vision, .work, .goals, .hrms, .petshop, .storefront {
-    margin: 20px;
-    padding: 20px;
+  body, .intro, .mission, .vision, .work, .goals, .hrms, .petshop, .storefront, .tios {
+    margin: 5px;
+    padding: 5px;
     height: auto;
-    text-align:justify;
   }
 
-  /* Grid layouts become single column */
   .mission,
   .vision,
   .work,
   .goals,
   .hrms,
   .petshop,
-  .storefront {
+  .storefront,
+  .tios {
     grid-template-columns: 1fr;
-    text-align: justify;
-      margin: 20px;
+    text-align: center;
   }
 
-  /* Images full width */
   .mission-image img,
   .vision-image img,
   .work-image img,
   .goals-image img,
   .hrms-image img,
   .petshop-image img,
-  .storefront-image img {
+  .storefront-image img 
+  .tios-image img{
     width: 100%;
     height: auto;
   }
 
-  /* Header spacing and text */
   header {
     flex-wrap: wrap;
     overflow: visible;
-      padding-left: 0;
+    padding-left: 0;
   }
 
   nav ul {
     gap: 3px;
     margin-top: 10px;
     overflow: visible;
-    font-size:small;
+    font-size:medium;
   }
 
   nav ul li {
@@ -475,10 +659,8 @@ footer{
   .hero, .about, .portfolio, .contact {
     padding: 20px;
     height: auto;
-    position: cover;
   }
 
-  /* Adjust text sizing */
   h1, h2 {
     font-size: 1.5rem;
   }
@@ -487,7 +669,6 @@ footer{
     font-size: 1rem;
   }
 
-  /* .social section */
   .social {
     padding: 10px;
     height: auto;
@@ -502,6 +683,13 @@ footer{
   .social-links a {
     font-size: 20px;
   }
+  .skills-scroller {
+    font-size: 16px;      
+    padding: 8px 0;
+  }
+  .scroll-text span {
+    padding-right: 50px;   
+  }
 
   footer {
     padding: 10px 20px;
@@ -509,4 +697,3 @@ footer{
     text-align: center;
   }
 }
-

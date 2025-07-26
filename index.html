@@ -4,6 +4,30 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width initial-scale=1.0">
         <title>My profile</title>
+        <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const options = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('animate');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    const sections = document.querySelectorAll('.mission, .vision');
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  });
+</script>
+</body>
+</html>
+
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
@@ -23,6 +47,13 @@
                 <h2>Welcome to my little corner on the web I'm Someone who loves turning ideas into interactive, Meaningful websites.</h2>
                 <p>I am Aparna, currently exploring the world of web development, one line of code at a time.</p>
             </section>
+
+            <div class="skills-scroller">
+            <div class="scroll-text">
+                <span>•&nbsp;HTML&nbsp;&nbsp;&nbsp;•&nbsp; CSS&nbsp;&nbsp;&nbsp;• &nbsp;JavaScript&nbsp;&nbsp;&nbsp;•&nbsp; PHP&nbsp;&nbsp;&nbsp;•&nbsp;Laravel&nbsp;&nbsp;&nbsp;•&nbsp;WordPress&nbsp;&nbsp;•&nbsp;Shopify&nbsp;&nbsp;&nbsp;•&nbsp;MySQL&nbsp;&nbsp;&nbsp;•&nbsp;Ajax&nbsp;&nbsp;&nbsp;•&nbsp;Project Management&nbsp;&nbsp;&nbsp;•&nbsp;Public Relations&nbsp;&nbsp;&nbsp;•&nbsp;Team Work&nbsp;&nbsp;&nbsp;•&nbsp;Time Management&nbsp;&nbsp;&nbsp;•&nbsp;Leadership&nbsp;&nbsp;&nbsp;•&nbsp;Effective Communication&nbsp;&nbsp;&nbsp;•&nbsp;Critical Thinking&nbsp;&nbsp;&nbsp;•&nbsp;Hardworking&nbsp;&nbsp;&nbsp;</span>
+                <span>•&nbsp;HTML&nbsp;&nbsp;&nbsp;•&nbsp; CSS&nbsp;&nbsp;&nbsp;• &nbsp;JavaScript&nbsp;&nbsp;&nbsp;•&nbsp; PHP&nbsp;&nbsp;&nbsp;•&nbsp;Laravel&nbsp;&nbsp;&nbsp;•&nbsp;WordPress&nbsp;&nbsp;•&nbsp;Shopify&nbsp;&nbsp;&nbsp;•&nbsp;MySQL&nbsp;&nbsp;&nbsp;•&nbsp;Ajax&nbsp;&nbsp;&nbsp;•&nbsp;Project Management&nbsp;&nbsp;&nbsp;•&nbsp;Public Relations&nbsp;&nbsp;&nbsp;•&nbsp;Team Work&nbsp;&nbsp;&nbsp;•&nbsp;Time Management&nbsp;&nbsp;&nbsp;•&nbsp;Leadership&nbsp;&nbsp;&nbsp;•&nbsp;Effective Communication&nbsp;&nbsp;&nbsp;•&nbsp;Critical Thinking&nbsp;&nbsp;&nbsp;•&nbsp;Hardworking&nbsp;&nbsp;&nbsp;</span>
+            </div>
+            </div>
 
             <section class="intro">
                 <p>I'm from Kerala, with a background in web design and development. What started as a curiosity for how websites work has now grown into a passion for creating simple, user-friendly digital experiences. Through hands-on learning and real projects, I'm building my skills one step at a time - and this site is where I share that journey</p>
